@@ -48,8 +48,8 @@ const removeSpaces = ()=>{
     </div>
     <div className="container my-3">
       <h2>Your Text Summary</h2>
-      <p>{text.trim().length===0?0:text.trim().split(" ").length} words, and {text.length} characters</p>
-      <p>Take {0.08*(text.trim().length===0?0:text.trim().split(" ").length)} Minutes reading Time</p>
+      <p>{text.trim().length===0?0:text.trim().split(/\s+/).length} words, and {text.length} characters</p>
+      <p>Take {0.08*(text.trim().length===0?0:text.trim().split(/\s+/).length)} Minutes reading Time</p>
       <h2>Preview</h2>
       <p>{text.length>0?text:"Enter your text here to Preview"}</p>
     </div>
