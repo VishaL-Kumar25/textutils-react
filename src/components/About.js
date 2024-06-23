@@ -120,9 +120,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      <button type="button" onClick={changeMode} className="btn btn-dark my-2">
-        {mode}
-      </button>
     </div>
   );
 }

@@ -41,10 +41,10 @@ const removeSpaces = ()=>{
       <div className="mb-3">
         <textarea className="form-control" style={{ backgroundColor: props.mode === "dark"||"primary" ? "transparent" : "white", color: props.mode === "dark" ? "white" : "black" }} value={text} id="myBox" rows="8" onClick={removeVal} onChange={renametext}></textarea>
       </div>
-      <button className="btn btn-primary" onClick={transformTextUp}>Convert to Uppercase</button>
-      <button className="btn btn-primary mx-2" onClick={transformTextLo}>Convert to Lowercase</button>
-      <button className="btn btn-primary" onClick={copyText}>Copy</button>
-      <button className="btn btn-primary mx-2" onClick={removeSpaces}>Remove extra Spaces</button>
+      <button disabled = {text.length===0} className="btn btn-primary" onClick={transformTextUp}>Convert to Uppercase</button>
+      <button disabled = {text.length===0} className="btn btn-primary my-1 mx-2" onClick={transformTextLo}>Convert to Lowercase</button>
+      <button disabled = {text.length===0} className="btn btn-primary" onClick={copyText}>Copy</button>
+      <button disabled = {text.length===0} className="btn btn-primary my-1 mx-2" onClick={removeSpaces}>Remove extra Spaces</button>
     </div>
     <div className="container my-3">
       <h2>Your Text Summary</h2>
